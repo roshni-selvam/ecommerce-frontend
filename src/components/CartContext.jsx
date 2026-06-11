@@ -39,7 +39,7 @@ export function CartProvider({ children }) {
     }
   }, [cartItems, user]);
 
-  // 🌟 FIXED: Single object parameter (productWithVariants)
+  //  FIXED: Single object parameter (productWithVariants)
   const addToCart = (productWithVariants) => {
     setCartItems((prevItems) => {
       // ID, Size, Color  check 
