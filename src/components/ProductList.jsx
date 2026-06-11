@@ -17,13 +17,13 @@ export default function ProductList({ search }) {
   const [cartMsg,      setCartMsg]      = useState(null);
 
   const filtered = products.filter(
-    (p) =>
-      p.category === category &&
-      p.name.toLowerCase().includes((search || "").toLowerCase())
-  );
+  (p) =>
+    (category === "all" || p.category === category) && 
+    p.name.toLowerCase().includes((search || "").toLowerCase())
+);
 
   const handleCart = (item) => {
-    // Sarees-ku size no
+    
     if (category !== "sarees" && !selectedSize[item.id]) {
       setCartMsg(`Please select a size — "${item.name}"`);
       setTimeout(() => setCartMsg(null), 2500);
@@ -43,8 +43,9 @@ export default function ProductList({ search }) {
       <div className="shop-header">
         <p className="shop-sub">✦ TrendyVibe Collection</p>
         <h2 className="shop-title" style={{ textTransform: "capitalize" }}>
-          {category} Wear
-        </h2>
+  {category === "all" ? "All" : category} Wear  
+</h2>
+        
         
       </div>
 

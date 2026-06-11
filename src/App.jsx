@@ -18,7 +18,6 @@ import About         from "./components/About";
 import Contact       from "./components/Contact";
 import WelcomeModal  from "./components/WelcomeModal";
 
-// Home page — எல்லா sections ஒரே page-ல
 function HomePage() {
   return (
     <>

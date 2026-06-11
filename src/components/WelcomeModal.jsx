@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 import "./WelcomeModal.css";
 
 const WelcomeModal = () => {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate(); // 
 
   useEffect(() => {
     const hasVisited = localStorage.getItem("trendyvibe_visited");
@@ -19,7 +21,7 @@ const WelcomeModal = () => {
 
   const handleShopNow = () => {
     handleClose();
-    window.location.href = "/collections";
+    navigate("/shop/all"); 
   };
 
   if (!show) return null;

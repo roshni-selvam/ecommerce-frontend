@@ -117,7 +117,7 @@ function Collection() {
               <div className="col-divider" />
               <p className="col-desc">{col.desc}</p>
 
-              {/* ✅ FIXED — route correct */}
+              {/*  FIXED — route correct */}
               <button
                 className="col-btn"
                 onClick={() => navigate(`/shop/${col.route}`)}

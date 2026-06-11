@@ -39,10 +39,10 @@ export function CartProvider({ children }) {
     }
   }, [cartItems, user]);
 
-  // 🌟 FIXED: Single object parameter (productWithVariants) vaangura maari mathiyachu!
+  // 🌟 FIXED: Single object parameter (productWithVariants)
   const addToCart = (productWithVariants) => {
     setCartItems((prevItems) => {
-      // ID, Size, Color moonume match aaguradha nu check panrom
+      // ID, Size, Color  check 
       const exist = prevItems.find(
         (item) =>
           item.id === productWithVariants.id &&
